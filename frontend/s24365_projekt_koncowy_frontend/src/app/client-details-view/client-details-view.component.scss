@@ -1,0 +1,34 @@
+.client-details-container {
+    margin: 16px;
+    display: flex;
+    flex-direction: row;
+}
+
+.back-button-containter {
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.back-button {
+    margin-top: 16px;
+    align-self: flex-end;
+}
+
+.client-details {
+    width: calc(50% - 2em);
+    margin: 1em;
+}
+
+.account-list {
+    width: calc(50% - 2em);
+    margin: 1em;
+}
+
+.back-button {
+    margin: 1em;
+}
+
+.client-details-header {
+    margin: 1em;
+}

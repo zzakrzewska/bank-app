@@ -1,0 +1,17 @@
+<mat-list class="mat-elevation-z5">
+
+    <mat-list-item>
+        <h3 mat-subheader>Transaction sender</h3>
+    </mat-list-item>
+
+    <mat-list-item (click)="goToClient(sender.pesel)">
+        <span matListItemTitle>Name</span>
+        <span matListItemLine>{{sender.name}}</span>
+    </mat-list-item>
+    
+    <mat-list-item (click)="goToAccount(sender.accountNumber)">
+        <span matListItemTitle>Account number</span>
+        <span matListItemLine>{{sender.accountNumber}}</span>
+    </mat-list-item>
+
+</mat-list>

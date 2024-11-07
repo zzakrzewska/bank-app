@@ -1,0 +1,21 @@
+<mat-table class="mat-elevation-z5" [dataSource]="clients">
+
+    <ng-container matColumnDef="surname">
+        <mat-header-cell *matHeaderCellDef>Surname</mat-header-cell>
+        <mat-cell *matCellDef="let client">{{client.surname}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+        <mat-cell *matCellDef="let client">{{client.name}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="pesel">
+        <mat-header-cell *matHeaderCellDef>PESEL</mat-header-cell>
+        <mat-cell *matCellDef="let client">{{client.pesel}}</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let client; columns: displayedColumns;" (click)="onRowClicked(client.pesel)"></mat-row>
+
+</mat-table>

@@ -1,0 +1,12 @@
+<h2 class="account-details-header">Account details</h2>
+<div class="account-data-container">
+    <app-account-details></app-account-details>
+</div>
+<div class="account-details-container">
+    <app-transaction-list class="transaction-list"></app-transaction-list>
+    <app-account-owners class="account-owners"></app-account-owners>
+</div>
+<div class="back-button-containter">
+    <button mat-raised-button color="primary" (click)="createTransfer()" class="new-transfer-button">New transfer</button>
+    <button mat-raised-button color="secondary" (click)="back()" class="back-button">Back</button>
+</div>

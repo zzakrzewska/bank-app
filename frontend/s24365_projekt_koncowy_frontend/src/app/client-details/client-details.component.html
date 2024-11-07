@@ -1,0 +1,32 @@
+<mat-list class="mat-elevation-z5">
+
+    <mat-list-item>
+        <h2 mat-subheader>{{client.surname}} {{client.name}}</h2>
+    </mat-list-item>
+
+    <mat-list-item>
+        <span matListItemTitle>PESEL</span>
+        <span matListItemLine>{{client.pesel}}</span>
+    </mat-list-item>
+
+    <mat-list-item>
+        <span matListItemTitle>Birth Date</span>
+        <span matListItemLine>{{client.birthDate}}</span>
+    </mat-list-item>
+
+    <mat-list-item>
+        <span matListItemTitle>Age</span>
+        <span matListItemLine>{{client.age}}</span>
+    </mat-list-item>
+
+    <mat-list-item>
+        <span matListItemTitle>Address</span>
+        <span matListItemLine>{{client.address}}</span>
+    </mat-list-item>
+
+    <mat-list-item>
+        <span matListItemTitle>Email</span>
+        <span matListItemLine>{{client.mail ? client.mail : '-'}}</span>
+    </mat-list-item>
+
+</mat-list>

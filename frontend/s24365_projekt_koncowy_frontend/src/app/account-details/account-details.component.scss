@@ -1,0 +1,10 @@
+.account-details-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    margin: 16px;
+}
+
+.account-details, .account-number {
+    width: 50%;
+}

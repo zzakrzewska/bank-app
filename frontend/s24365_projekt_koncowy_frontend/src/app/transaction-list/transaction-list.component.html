@@ -1,0 +1,22 @@
+<h3>Transaction history</h3>
+
+<mat-table class="mat-elevation-z5" [dataSource]="transactions">
+
+    <ng-container matColumnDef="receiverAccountNumber">
+        <mat-header-cell *matHeaderCellDef>Receiver account number</mat-header-cell>
+        <mat-cell *matCellDef="let transaction">{{transaction.accountNumber}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="receiverName">
+        <mat-header-cell *matHeaderCellDef>Receiver name</mat-header-cell>
+        <mat-cell *matCellDef="let transaction">{{transaction.name}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="amount">
+        <mat-header-cell *matHeaderCellDef>Amount</mat-header-cell>
+        <mat-cell *matCellDef="let transaction">{{transaction.amount}}</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let transaction; columns: displayedColumns;" (click)="onRowClicked(transaction.transactionReference)"></mat-row>
+</mat-table>

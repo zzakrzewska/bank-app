@@ -1,0 +1,47 @@
+<div class="form-container">
+    <form class="create-transaction-form" (ngSubmit)="onSubmit(createTransactionForm)" #createTransactionForm="ngForm">
+        <mat-form-field>
+            <mat-label>Sender Account Number</mat-label>
+            <input matInput [(ngModel)]="transaction.senderAccountNumber" name="sender" (change)="findSender()" required
+                pattern="^(PL)[0-9]{26}$">
+                        <mat-error *ngIf="registerForm.value.sender">Account number must be in IBAN format</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Receiver Account Number</mat-label>
+            <input matInput [(ngModel)]="transaction.receiverAccountNumber" name="receiver" (change)="findReceiver()" required
+                pattern="^(PL)[0-9]{26}$">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Amount</mat-label>
+            <input matInput [(ngModel)]="transaction.amount" name="amount" type="number" min="0.01" step="0.01" required>
+        </mat-form-field>
+
+        <div class="button-container">
+            <button mat-raised-button class="submit-button" color="primary" type="submit">Submit</button>
+            <button mat-raised-button class="back-button" color="secondary" type="button" (click)="back()">Back</button>
+        </div>
+    </form>
+
+    <div class="involved-parties">
+
+        <mat-card>
+            <mat-card-header>Sender</mat-card-header>
+            <mat-card-content class="sender-card-content">
+                {{senderAccount.ownerName ? senderAccount.ownerName : 'Sender not found'}}
+            </mat-card-content>
+            <mat-card-content class="sender-card-content"><i>
+                {{senderAccount.balance ? "Available balance: " + senderAccount.balance : ''}}
+            </i></mat-card-content>
+        </mat-card>
+
+        <mat-card>
+            <mat-card-header>Receiver</mat-card-header>
+            <mat-card-content class="receiver-card-content">
+                {{receiverAccount.ownerName ? receiverAccount.ownerName : 'Sender not found'}}
+            </mat-card-content>
+        </mat-card>
+
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<mat-table [dataSource]="accounts" class="mat-elevation-z5">
+
+    <ng-container matColumnDef="accountNumber">
+        <mat-header-cell *matHeaderCellDef>Related accounts</mat-header-cell>
+        <mat-cell *matCellDef="let account">{{account.accountNumber}}</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let account; columns: displayedColumns;" (click)="onRowClicked(account.accountNumber)"></mat-row>
+
+</mat-table>

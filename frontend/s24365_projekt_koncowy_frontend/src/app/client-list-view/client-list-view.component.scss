@@ -1,0 +1,20 @@
+.client-list-header {
+    margin: 1em;
+}
+
+.client-list-container {
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.new-transfer-button {
+    margin-top: 16px;
+    align-self: flex-end;
+    margin: 1em;
+}
+
+.client-list {
+    width: calc(100% - 2em);
+    margin: 1em;
+}

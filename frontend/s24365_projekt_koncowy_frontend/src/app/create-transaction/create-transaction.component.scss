@@ -1,0 +1,32 @@
+.form-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.create-transaction-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.involved-parties {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+    gap: 1em;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.back-button, .submit-button {
+    margin-left: 1em;
+}
+
+.receiver-card-content, .sender-card-content {
+    color: gray;
+}

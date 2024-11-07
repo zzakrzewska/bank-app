@@ -1,0 +1,18 @@
+<h3>Account owners</h3>
+
+<mat-table [dataSource]="owners" class="mat-elevation-z5">
+
+    <ng-container matColumnDef="nameSurname">
+        <mat-header-cell *matHeaderCellDef>Owner</mat-header-cell>
+        <mat-cell *matCellDef="let owner">{{owner.surname}} {{owner.name}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="ownerType">
+        <mat-header-cell *matHeaderCellDef>Owner Type</mat-header-cell>
+        <mat-cell *matCellDef="let owner">{{owner.type}}</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let owner; columns: displayedColumns;" (click)="onRowClicked(owner.pesel)"></mat-row>
+
+</mat-table>

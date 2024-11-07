@@ -1,0 +1,43 @@
+.transaction-details-container {
+    margin: 16px;
+    display: flex;
+    flex-direction: row;
+}
+
+.transaction-involved-parties-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.button-containter {
+    margin: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.back-button, .cancel-transfer-button {
+    margin-left: auto;
+}
+
+.transaction-details {
+    width: calc(50% - 2em);
+    margin: 1em;
+}
+
+.transaction-receiver {
+    margin: 1em;
+}
+
+.transaction-sender {
+    margin: 1em;
+}
+
+.back-button {
+    margin: 1em;
+}
+
+.transaction-details-header {
+    margin: 1em;
+}

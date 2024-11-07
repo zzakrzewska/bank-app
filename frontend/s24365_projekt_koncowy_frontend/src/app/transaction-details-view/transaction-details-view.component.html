@@ -1,0 +1,12 @@
+<h2 class="transaction-details-header">Transaction details</h2>
+<div class="transaction-details-container">
+    <app-transaction-details class="transaction-details"></app-transaction-details>
+    <div class="transaction-involved-parties-container">
+        <app-transaction-receiver class="transaction-receiver"></app-transaction-receiver>
+        <app-transaction-sender class="transaction-sender"></app-transaction-sender>
+    </div>
+</div>
+<div class="button-containter">
+    <button mat-raised-button color="secondary" (click)="cancelTransfer()" class="cancel-transfer-button">Cancel transfer</button>
+    <button mat-raised-button color="primary" (click)="back()" class="back-button">Back</button>
+</div>

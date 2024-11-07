@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "@angular/compiler": "^18.0.3"
+  }
+}

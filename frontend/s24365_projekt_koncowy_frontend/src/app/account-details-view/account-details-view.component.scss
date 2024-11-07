@@ -1,0 +1,38 @@
+.account-details-container {
+    margin: 16px;
+    display: flex;
+    flex-direction: row;
+}
+
+.account-data-container {
+    margin: 16px;
+}
+
+.back-button-containter {
+    margin: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.back-button, .new-transfer-button {
+    margin-left: auto;
+}
+
+.account-owners {
+    width: calc(50% - 2em);
+    margin: 1em;
+}
+
+.transaction-list {
+    width: calc(50% - 2em);
+    margin: 1em;
+}
+
+.back-button {
+    margin: 1em;
+}
+
+.account-details-header {
+    margin: 1em;
+}
